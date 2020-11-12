@@ -1,0 +1,6 @@
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <!-- f.association fait une liste de tous les ingredients puis enregistrera l'id de l'ingredient une fois selectionné -->
+  <%= f.submit "Submit ingredient/dose" %>
+<% end %>
