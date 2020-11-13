@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     # new_cocktail_dose GET    /cocktails/:cocktail_id/doses/new(.:format)
   end
   resources :doses, only: :destroy
+
+  root to: 'cocktails#index'
 end
