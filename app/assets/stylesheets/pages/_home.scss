@@ -1,8 +1,28 @@
 // Specific CSS for your home-page
+@import url(//db.onlinewebfonts.com/c/21400dc679986534519c638136d62dbf?family=Rage+Italic);
 
-// .background-image {
-//   background-image: url(vicecity-girl.png)
-//   height: 867px;
-//   background-repeat-x: no-repeat;
-//   opacity: 0.6;
-// }
+@font-face {font-family: "Rage Italic"; src: url("//db.onlinewebfonts.com/t/21400dc679986534519c638136d62dbf.eot"); src: url("//db.onlinewebfonts.com/t/21400dc679986534519c638136d62dbf.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/21400dc679986534519c638136d62dbf.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/21400dc679986534519c638136d62dbf.woff") format("woff"), url("//db.onlinewebfonts.com/t/21400dc679986534519c638136d62dbf.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/21400dc679986534519c638136d62dbf.svg#Rage Italic") format("svg"); }
+
+
+body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url("https://img5.goodfon.com/original/1920x1080/e/c1/grand-theft-auto-vice-city-gorod-fon-devushka-bokal.jpg"), linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0.16710434173669464) 0%);
+
+  /* Half height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg h1 {
+  color: white;
+  opacity: 0.9;
+  font-family: "Rage Italic";
+  text-shadow: 1px 1px 4px pink;
+}
