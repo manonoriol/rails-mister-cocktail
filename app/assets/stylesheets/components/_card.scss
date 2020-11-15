@@ -1,12 +1,13 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width: 500px;
+  width: 450px;
   border-radius: 5px;
+  border: 1px solid lightgrey;
+  color:  lightgrey;
 }
 
 .card-product img {
@@ -19,6 +20,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 .card-product p {
@@ -33,7 +35,9 @@
   padding: 16px;
 }
 
-.container {
+.cocktails-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 30px;
 }

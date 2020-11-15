@@ -1,24 +1,46 @@
 
-<div class="bg" style="background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0.16710434173669464) 0%), url('https://img5.goodfon.com/original/1920x1080/e/c1/grand-theft-auto-vice-city-gorod-fon-devushka-bokal.jpg');">
-  <h1>ViceCity Cocktails</h1>
+<div class="bg" style="background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0.16710434173669464) 0%), url('../assets/images/vice-city-bg.jpg');">
+
+<pre>
+ _    ______             _______ __
+| |  / /  _/_______     / ____(_) /___  __
+| | / // // ___/ _ \   / /   / / __/ / / /
+| |/ // // /__/  __/  / /___/ / /_/ /_/ /
+|___/___/\___/\___/   \____/_/\__/\__, /
+   ______           __   __      /____/
+  / ____/___  _____/ /__/ /_____ _(_) /____
+ / /   / __ \/ ___/ //_/ __/ __ `/ / / ___/
+/ /___/ /_/ / /__/ , // /_/ /_/ / / (__  )
+\____/\____/\___/_/|_|\__/\__,_/_/_/____/
+
+  </pre>
+  <div class="add-link"> <%= link_to 'add a new cocktail', new_cocktail_path %></div>
 </div>
 
 
 
+<div class="big-container d-flex justify-content-center">
 
-<div class="container">
+<div class="cocktails-container">
 
 <% @cocktails.each do |cocktail| %>
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <% if cocktail.photo.attached? %>
+      <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+      <img src='https://source.unsplash.com/weekly?cocktail'/>
+    <% end %>
     <div class="card-product-infos">
-      <h2><%= cocktail.name%> <%= link_to 'show cocktail', cocktail_path(cocktail) %></h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+      <h2><%= cocktail.name.upcase%></h2>
+      <p><%= link_to 'show cocktail', cocktail_path(cocktail) %></p>
     </div>
   </div>
 <% end %>
 
+<img src="../assets/images/vice-city-bg" alt="vc">
+
  </div>
+</div>
 
 
-<%= link_to '+Add a new cocktail', new_cocktail_path %>
+
